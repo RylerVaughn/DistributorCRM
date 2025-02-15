@@ -1,0 +1,74 @@
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #D7CEB2;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+p {
+    text-align: center;
+    margin-top: 0;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.Form-Outer-Border {
+    width: 40%;
+    height: 100%;
+    background-color: #A59E8C;
+    background-color: rgba(165, 158, 140, 0.8);
+    margin: 20px auto 40% auto;
+    padding-top: 20px;
+}
+
+.Block-Label {
+    display: block;
+    margin: 10px auto 10px auto;
+}
+
+.Form-Border {
+    width: 50%;
+    margin: 0 auto 0 auto;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    padding: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input {
+    border: 2px solid white;
+    font-size: 20px;
+}
+
+.Submit {
+    display: block;
+    background-color: #66635B;
+    border: 3px solid #66635B;
+    margin: 30px auto 30px auto;
+    width: 50%;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.Return {
+    display: block;
+    background-color: #66635B;
+    border: 3px solid #66635B;
+    padding: 0.5rem 0 0.5rem 0;
+    width: 10%;
+}
+
+a {
+    text-decoration: none;
+}

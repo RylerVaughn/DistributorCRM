@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'CForm/styles/index.css'%}">
+        <meta charset="utf-8">
+    </head>
+    <body style="background-image: url('{% static 'CForm/images/banner-3-1-1.png'%}');">
+        <h1>Client Forms</h1>
+        <p>Welcome to your Client Forms.</p>
+        <div class="Button-Options">
+            <a href="{% url 'CForm:create' %}"><button class="Button-Option" href="">Submit a Client Form</button></a>
+            <a href="{% url 'CForm:viewclients' %}"><button class="Button-Option" href="">View Clients</button></a>
+        </div>
+    </body>
+</html>

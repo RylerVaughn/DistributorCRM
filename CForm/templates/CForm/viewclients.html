@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{% static 'CForm/styles/viewclients.css' %}">
+        <charset utf-8>
+    </head>
+    <body style='background-image: url("{% static 'CForm/images/aesthetic-cloud-background-74w1g5k8gfuisjyp.jpg' %}")'>
+        <a href='{% url 'CForm:index' %}'><button class='Return'>Return</button></a>
+        <h1>Clients</h1>
+        <div class='Clients-Container'>
+            {% if clients %}
+            {% for client in clients %}
+            <div class='Client-Container'>
+                <h4>{{ client }}</h4>
+                <a href='{% url 'CForm:viewspecific' client.id %}'><button class='View-More'>Details</button></a>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No clients found</p>
+            {% endif %}
+        </div>
+    </body>
+</html>

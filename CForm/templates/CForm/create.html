@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'CForm/styles/create.css' %}">
+        <meta charset="utf-8">
+    </head>
+    <body style="background-image: url({% static 'CForm/images/40.UptownTownhousebyChangoCo-RecreationRoomSeatingArea-7603584a62a54f69a7f10a0ce621c0ca.jpg' %})">
+        <a href="{% url 'CForm:index' %}"><button class="Return">Return</button></a>
+        <div class="Form-Outer-Border">
+            <h1>Client Registration Form</h1>
+            <p>Please fill out the details below.</p>
+            <hr>
+            <form method="post">
+                {% csrf_token %}
+                <fieldset class="Form-Border">
+                    <label class="Block-Label" for='first_name'>First Name: <input name='first_name' type="text" id="first_name" required value='{{ form.first_name.value }}'/></label>
+                    <label class='Block-Label' for='last_name'>Last Name: <input name='last_name' required id="last_name" type="text" value='{{ form.last_name.value }}'/></label>
+                    <label class="Block-Label" for='phone_number'>Phone Number: <input name='phone_number' type="text" id='phone_number' required value='{{ form.phone_number.value }}'/></label>
+                    <label class="Block-Label" for='address'>Client Address: <input name='address' type="text" id="address"  value='{{ form.address.value }}'></label>
+                </fieldset>
+                <button type="submit" class="Submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
