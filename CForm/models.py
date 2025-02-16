@@ -14,3 +14,11 @@ class ClientCreator(forms.ModelForm):
     class Meta:
         model = Client
         fields = ['first_name', 'last_name', 'phone_number', 'address']
+
+class MessageTemplate(models.Model):
+    body = models.TextField()
+
+class MessageTemplateCreator(forms.ModelForm):
+    class Meta:
+        model = MessageTemplate
+        fields = ['body']

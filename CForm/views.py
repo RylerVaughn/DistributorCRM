@@ -21,3 +21,14 @@ def view_clients(request):
 
 def view_specific(request, id):
     return render(request, 'CForm/viewspecific.html', context={'client': Client.objects.get(id=id)})
+
+def edit_client(request, id):
+    if request.method == 'POST':
+        form = ClientCreator(request.POST, instance=Client.objects.get(id=id))
+        if form.is_valid():
+            form.save()
+            return redirect('CForm:viewclients')
+    else:
+        form = ClientCreator()
+    return render(request, 'CForm/editclient.html', context={'client': Client.objects.get(id=id), 'form': form})
+    

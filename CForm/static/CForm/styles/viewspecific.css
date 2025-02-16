@@ -1,0 +1,35 @@
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.Client-Card {
+    border: 2px solid black;
+    width: 40%;
+    height: 100%;
+    margin: 5% auto 5% auto;
+}
+
+.Name {
+    text-indent: 10%;
+}
+
+.Client-Id-Rep {
+    margin: 5% auto 0 auto;
+    text-align: center;
+    background-color: blue;
+}
+
+.Client-Id-Text {
+    font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Return {
+    border: 2px solid black;
+    background-color: white;
+    padding: 0.5rem 5% 0.5rem 5%;
+}
+

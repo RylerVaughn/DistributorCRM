@@ -3,10 +3,21 @@
 <html>
     <head>
         <link rel='stylesheet' type='text/css' href='{% static 'CForm/styles/viewspecific.css' %}'>
-        <charset utf-8>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'/>
     </head>
     <body>
+        <a href='{% url 'CForm:viewclients' %}'><button class='Return'>Return</button></a>
         <div class='Client-Card'>
+            <div class='Client-Id-Rep'>
+                <h1 class='Client-Id-Text'>CLIENT NUMBER {{client.id}}</h1>
+            </div>
+            <div class='Name-Container'>
+                <h2 class='Name'>First Name: {{client.first_name}}</h2>
+                <h2 class='Name'>Last Name: {{client.last_name}}</h2>
+                <h2 class='Name'>Address: {{client.address}}</h2>
+                <h2 class='Name'>Phone Number: {{client.phone_number}}</h2>
+            </div>
         </div>
     </body>
 </html>

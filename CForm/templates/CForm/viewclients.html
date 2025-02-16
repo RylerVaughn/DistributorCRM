@@ -13,7 +13,8 @@
             {% for client in clients %}
             <div class='Client-Container'>
                 <h4>{{ client }}</h4>
-                <a href='{% url 'CForm:viewspecific' client.id %}'><button class='View-More'>Details</button></a>
+                <a href='{% url 'CForm:viewspecific' client.id %}'><button class='Client-Option'>Details</button></a>
+                <a href='{% url 'CForm:editclient' client.id %}'><button class='Client-Option'>Edit</button></a>
             </div>
             {% endfor %}
             {% else %}

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='{% static 'CForm/styles/editclient.css' %}'>
+        <charset utf-8>
+    </head>
+    <body>
+        <div>
+            <a href='{% url 'CForm:viewclients' %}'><button>Return</button></a>
+            <h1>Edit Client: {{client.first_name}} {{client.last_name}}</h1>
+            <form method='post'>
+                {% csrf_token %}
+                <label for='first_name'>First Name: <input name='first_name' type='text' required id='first_name' value='{{client.first_name}}'/></label>
+                <label for='last_name'>Last Name: <input name='last_name' required id='last_name' value='{{client.last_name}}'/></label>
+                <label for='phone_number'>Phone Number: <input name='phone_number' id='phone_number' required value='{{client.phone_number}}'/></label>
+                <label for='address'>Address: <input name='address' id='address' required value='{{client.address}}'/></label>
+                <button type='submit'>Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
