@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{% static 'MessageForm/styles/editmessage.css' %}"/>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body style="background-image: url({% static 'MessageForm/images/bulut.jpg' %})">
+        <a href="{% url 'MessageForm:viewmessages' %}"><button class='Return'>Return</button></a>
+        <div class='Content-Section'>
+            <h1 class='Header'>Edit your Messaging Template</h1>
+            <hr>
+            <form method='post'>
+                {% csrf_token %}
+                <h3>Edit or Delete your Template Below</h3>
+                <textarea id='body' name='body' rows='5' cols='50' placeholder='Please type in something.'>{{message.body}}</textarea>
+                <div class='Flex-Container'>
+                    <button class='Action' type='submit' value='update' name='_action'>Confirm</button>
+                    <button class='Action' type='submit' name='_action' value='delete'>Delete</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
