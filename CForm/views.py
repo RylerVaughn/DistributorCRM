@@ -31,4 +31,3 @@ def edit_client(request, id):
     else:
         form = ClientCreator()
     return render(request, 'CForm/editclient.html', context={'client': Client.objects.get(id=id), 'form': form})
-    

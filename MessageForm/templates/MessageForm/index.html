@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='{% static 'MessageForm/styles/index.css' %}'/>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body style='background-image: url("{% static 'MessageForm/images/anothertry.jpg' %}")'>
+        <a href=''><button class='Return'>Return</button></a>
+        <div class='Options-Container'>
+            <h1 class='Header'>Message Templates</h1>
+            <p class='Directions'>Choose an option below </p>
+            <div class='Button-Container'>
+                <a href="{% url 'MessageForm:createmessage' %}"><button class='Button-Option'>Add a Messaging Template</button></a>
+                <a href="{% url 'MessageForm:viewmessages' %}"><button class='Button-Option'>View Messaging Templates</button></a>
+                <a href=''><button class='Button-Option'>Edit a Messaging Template</button></a>
+                <a href=''><button class='Button-Option'>Remove Messaging Template</button></a>
+            </div>
+        </div>
+    </body>
+</html>

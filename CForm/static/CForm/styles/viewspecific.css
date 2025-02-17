@@ -9,18 +9,24 @@ body {
 .Client-Card {
     border: 2px solid black;
     width: 40%;
-    height: 100%;
+    height: fit content;
     margin: 5% auto 5% auto;
+    padding: 2%;
+    background-color: darkgrey;
 }
 
-.Name {
+.Attribute {
     text-indent: 10%;
 }
 
+.Attribute-Container {
+    background-color: grey;
+    padding: 5% 0 5% 0;
+}
+
 .Client-Id-Rep {
-    margin: 5% auto 0 auto;
+    margin: 0 auto 0 auto;
     text-align: center;
-    background-color: blue;
 }
 
 .Client-Id-Text {

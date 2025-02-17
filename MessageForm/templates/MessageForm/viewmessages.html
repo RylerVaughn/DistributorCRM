@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{% static 'MessageForm/styles/viewmessages.css' %}"/>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    </head>
+    <body style="background-image: url({% static 'MessageForm/images/bulut.jpg' %})">
+        <a href="{% url 'MessageForm:index' %}"><button class='Return'>Return</button></a>
+        <div class='Content-Section'>
+            <div class='Heading-Section'>
+                <h1 class='Header'>All Messages</h1>
+            </div>
+            {% if messages %}
+            {% for message in messages %}
+            <div class='Edit-Container'>
+                <button class='Edit'>Edit</button>
+            </div>
+            <div class='Message-Container'>
+                <p class='Message-Body'>{{message.body}}</p>
+            </div>
+            {% endfor %}
+            {% else %}
+            <h2 class='No-Messages'>- - - No messages found - - -</h2> 
+            {% endif %}
+        </div>
+    </body>
+</html>

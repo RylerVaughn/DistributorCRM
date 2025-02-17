@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{% static 'MessageForm/styles/createmessage.css' %}"/>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    </head>
+    <body style="background-image: url({% static 'MessageForm/images/bulut.jpg' %})">
+        <a href="{% url 'MessageForm:index' %}"><button class='Return'>Return</button></a>
+        <div class='Content-Section'>
+            <h1 class='Header'>Messaging Template Form</h1>
+            <hr>
+            <form method='post'>
+                {% csrf_token %}
+                <label for='body'>Enter your message template</label>
+                <textarea id='body' name='body' rows='5' cols='50'></textarea>
+                <button class='Submit' type='submit'>Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

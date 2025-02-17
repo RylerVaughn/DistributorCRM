@@ -1,4 +1,4 @@
-#!/home/ryler/Documents/PythonPractice/Distributor/myvenv/bin/python3
+#!/home/ryler/Documents/PythonProjects/Distributor/myvenv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
