@@ -1,0 +1,71 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    background-color: rgba(116, 116, 116, 0.2);
+    border: 1px solid black;
+    width: 30%;
+    height: 40%;
+    margin: 5% auto;
+    padding: 20px
+}
+
+.header {
+    text-align: center;
+    font-family: 'sans serif';
+    margin-top:0%;
+    color: black;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.return {
+    display: block;
+    background-color: rgba(125, 125, 125, 0.7);
+    border: 1px solid black;
+    padding: 0.5rem 0 0.5rem 0;
+    width: 10%;
+    margin: 1%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 50px;
+    border-top: 1px solid black;
+}
+
+.option {
+    display: block;
+    height: 60px;
+    width: 325px;
+    background-color: rgba(125, 125, 125, 0.7);
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.flex-item-1 {
+    margin-bottom: 0;
+}
+
+.flex-item-2 {
+    margin-bottom: 100px;
+}
+
+p {
+    text-align: center;
+    margin-top: 0;
+    font-family: 'sans-serif';
+}

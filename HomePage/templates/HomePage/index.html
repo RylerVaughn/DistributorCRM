@@ -9,8 +9,11 @@
     <body style='background-image: url("{% static 'HomePage/images/Goku.jpg' %}"); background-size: cover;'>
         <div class='menu'>
             <h1>Distributor CRM</h1>
-                <a href="{% url 'CForm:index' %}"><button>View Client Resources</button></a>
-                <a href="{% url 'MessageForm:index' %}"><button>View Messaging Resources</button></a>
+            <div class='button-container'>
+                <a href="{% url 'CForm:index' %}"><button>Clients</button></a>
+                <a href="{% url 'MessageForm:index' %}"><button>Messages</button></a>
+                <a href="{% url 'JobForm:index' %}"><button>Jobs</button></a>
+            </div>
         </div>
     </body>
 </html>

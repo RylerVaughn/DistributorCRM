@@ -14,7 +14,7 @@
             <form method='post'>
                 {% csrf_token %}
                 <h3>Edit or Delete your Template Below</h3>
-                <textarea id='body' name='body' rows='5' cols='50' placeholder='Please type in something.'>{{message.body}}</textarea>
+                <textarea id='body' name='body' rows='5' cols='50' placeholder='Please type in something.' required>{{message.body}}</textarea>
                 <div class='Flex-Container'>
                     <button class='Action' type='submit' value='update' name='_action'>Confirm</button>
                     <button class='Action' type='submit' name='_action' value='delete'>Delete</button>

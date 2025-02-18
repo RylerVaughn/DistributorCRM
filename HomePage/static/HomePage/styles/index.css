@@ -10,10 +10,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
 }
 
 .menu {
-    height: 50%;
+    height: 30%;
     width: 40%;
     background-color: rgba(128, 128, 128, 0.6);
     display: flex;
@@ -21,6 +22,7 @@ body {
     flex-direction: column;   
     margin-bottom: 10%;
     border: 2px solid black;
+    padding: 2%;
 }
 
 h1 {
@@ -37,8 +39,17 @@ button {
     height: 50px;
     align-items: center;
     justify-content: center;
+    font-family: 'Tahoma';
+    font-size: 15px;
 }
 
 a {
     text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 30px;
 }

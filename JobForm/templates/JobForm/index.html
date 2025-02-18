@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{% static 'JobForm/styles/index.css' %}">
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body style="background-image: url('{% static "JobForm/images/highrise.jpg" %}'); background-size: cover;">
+        <a href="{% url 'HomePage:index' %}"><button class='return'>Return</button></a>
+        <div class='menu'>
+            <h1 class='header'>Job Resources</h1>
+            <p>Select an Option Below</p>
+            <div class='button-container'>
+                <a href=''><button class='option flex-item-1'>Add Job</button></a>
+                <a href=''><button class='option flex-item-2'>View Jobs</button></a>
+            </div>
+        </div>
+    </body>
+</html>

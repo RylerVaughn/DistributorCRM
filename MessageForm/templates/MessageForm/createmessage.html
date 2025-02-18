@@ -14,7 +14,7 @@
             <form method='post'>
                 {% csrf_token %}
                 <h3>Create your message below</h3>
-                <textarea id='body' name='body' rows='5' cols='50'></textarea>
+                <textarea id='body' name='body' rows='5' cols='50' required></textarea>
                 <button class='Submit' type='submit'>Submit</button>
             </form>
         </div>
