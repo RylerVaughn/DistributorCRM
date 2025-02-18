@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{% static 'HomePage/styles/index.css' %}">
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body style='background-image: url("{% static 'HomePage/images/Goku.jpg' %}"); background-size: cover;'>
+        <div class='menu'>
+            <h1>Distributor CRM</h1>
+                <a href="{% url 'CForm:index' %}"><button>View Client Resources</button></a>
+                <a href="{% url 'MessageForm:index' %}"><button>View Messaging Resources</button></a>
+        </div>
+    </body>
+</html>

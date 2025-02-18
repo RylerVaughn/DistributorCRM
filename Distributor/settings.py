@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'HomePage.apps.HomepageConfig',
     'MessageForm.apps.MessageformConfig',
     'CForm.apps.CformConfig',
     'django.contrib.admin',

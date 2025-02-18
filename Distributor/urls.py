@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('CForm/', include('CForm.urls')),
     path('MessageForm/', include('MessageForm.urls')),
+    path('', include('HomePage.urls')),
 ]
