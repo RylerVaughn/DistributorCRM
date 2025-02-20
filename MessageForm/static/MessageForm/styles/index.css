@@ -57,3 +57,11 @@ body {
 a {
     text-decoration: none;
 }
+
+.Button-Option:hover {
+    background-color: rgba(135, 206, 235, 0.4);
+}
+
+.Return:hover {
+    background-color: rgba(255, 255, 255, 0.5)
+}

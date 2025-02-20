@@ -43,6 +43,10 @@ button {
     font-size: 15px;
 }
 
+button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
 a {
     text-decoration: none;
 }

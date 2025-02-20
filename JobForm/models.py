@@ -9,7 +9,7 @@ class Job(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
 
     def total_payment(self):
-        return self.job_payment + self.job_tip
+        return f'${self.job_payment + self.job_tip}'
 
     def __str__(self):
         return f'Job Completed: {self.date}, Job Payment: {self.job_payment}, Job Tip: {self.job_tip}, Client: {self.client}'

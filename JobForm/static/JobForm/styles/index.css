@@ -33,6 +33,10 @@ body, html {
     margin: 1%;
 }
 
+.return:hover {
+    background-color: rgba(125, 125, 125, 0.4);
+}
+
 a {
     text-decoration: none;
 }
@@ -54,6 +58,10 @@ a {
     background-color: rgba(125, 125, 125, 0.7);
     border: 1px solid black;
     font-size: 20px;
+}
+
+.option:hover {
+    background-color: rgba(125, 125, 125, 0.4)
 }
 
 .flex-item-1 {
