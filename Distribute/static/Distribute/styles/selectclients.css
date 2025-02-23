@@ -9,13 +9,18 @@ html, body {
     color: white;
     text-align: center;
     font-size: 50px;
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 43, 59, 0.7);
+    border: 1px solid white;
+    border-bottom: none;
 }
 
 .menu {
-    background-color: rgba(0, 43, 59, 0.7);
-    border: 1px solid white;
     margin: 80px auto;
-    height: 80%;
+    height: fit-content;
     width: 40%;
 }
 
@@ -27,13 +32,6 @@ button {
     color: white;
 }
 
-.redirects {
-    display: block;
-    font-size: 25px;
-    width: 400px;
-    height: 5em;
-}
-
 button:hover {
     border: 2px solid rgba(255, 255, 255, 0.5);
     color: rgba(255, 255, 255, 0.5);
@@ -43,30 +41,44 @@ a {
     text-decoration: none;
 }
 
-.selection-container {
-    width: 100%;
-    height: 83%;
-    border: 1px solid white;
+
+.checkbox-container {
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 50px auto;
+    gap: 10px;
+    column-gap: 40px;
 }
 
-.column2 {
-    border: 2px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100%;
-    width: 100%;
+input {
+    width: 50px;
+    height: 50px;
+}
+
+label {
     color: white;
-    text-align: center;
+    font-size: 25px;
 }
 
-.column1 {
-    display: inline-block;
-    margin: 0;
-    height: 100%;
+.flex-container {
+    padding: 20px 0 20px 0;
+    background-color: rgba(0, 43, 59, 0.7);
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    justify-content: center;
     width: 100%;
-    font-size: 30px;
+}
+
+.submit {
+    margin: 0 auto;
+    display: block;
+    width: 400px;
+    height: 3em;
+    font-size: 25px;
+    background-color: rgba(0, 43, 59, 0.7);
+    margin-bottom: 20px;
+}
+
+.return {
+    margin: 10px 10px;
 }

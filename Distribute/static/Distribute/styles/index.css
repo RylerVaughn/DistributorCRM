@@ -2,12 +2,18 @@
 html, body {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .heading {
     color: white;
     text-align: center;
     font-size: 50px;
+}
+
+.return {
+    margin: 10px;
 }
 
 .menu {
@@ -54,7 +60,7 @@ a {
     align-items: center;
 }
 
-.group-display {
+.group-display-1 {
     background-color: rgba(0, 0, 0, 0.3);
     height: 100%;
     display: flex;
@@ -65,6 +71,19 @@ a {
     color: white;
 } 
 
+.group-display {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    border: 1px solid white;
+    border-bottom: none;
+    color: white;
+}
+
+.group-display-2 {
+    text-align: center;
+    overflow-y: auto;
+}
+
 .group {
     width: 50%;
     height: 30%;
@@ -72,4 +91,13 @@ a {
 
 .text-p {
     margin-inline: 10px;
+}
+
+.client-text {
+    display: block;
+}
+
+.text-container {
+    display: block;
+    background-color: green;
 }

@@ -9,20 +9,25 @@
     <body style="background-image: url('{% static 'Distribute/images/bluejohn.jpg' %}'); background-size: cover;">
         <a href="{% url 'Distribute:index' %}"><button class='return'>Return</button></a>
         <div class='menu'>
-            <h1 class='heading'>Select Message Template</h1>
-            {% if messages %}
-            <form method='post'>
+            <h1 class='heading'>Select Clients</h1>
+            {% if clients %}
+            <form id='client-form' method='post'>
                 {% csrf_token %}
-                <div class='selection-container'>
-                    {% for message in messages %}
-                    <button  type='submit' class='column1' value='{{message.id}}' name='text_message'>Select</button>
-                    <div class='column2'><p>{{message}}</p></div>
+                <div class='flex-container'>
+                    <div class='checkbox-container'>
+                    {% for client in clients %}
+                        <input type='checkbox' id='{{ client.id }}' name='client-checkbox' value='{{ client.id }}'>
+                        <label for='{{ client.id }}'> {{client}} </label>
                     {% endfor %}
+                    </div>
                 </div>
             </form>
             {% else %}
-            <h3>No Messages Found</h3>
+            <p>No clients found.</p>
             {% endif %}
         </div>
+        {% if clients %}
+        <button type='submit' form='client-form' class='submit'>Submit</button>
+        {% endif %}
     </body>
 </html>
