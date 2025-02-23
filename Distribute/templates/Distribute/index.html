@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='{% static 'Distribute/styles/index.css' %}'>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body style="background-image: url('{% static 'Distribute/images/bluejohn.jpg' %}'); background-size: cover;">
+        <a href="{% url 'HomePage:index' %}"><button class='return'>Return</button></a>
+        <div class='menu'>
+            <h1 class='heading'>Distribute Messages</h1>
+            <div class='flex-container'>
+                <div class='group'>
+                    {% if text_message %}
+                    <div class='group-display'><p class='text-p'> {{text_message}} </p></div>
+                    {% else %}
+                    <div class='group-display'> Please choose a template. </div>
+                    {% endif %}
+                    <a href="{% url 'Distribute:selectmessage' %}"><button class='redirects'>Select Message Template</button></a>
+                </div>
+                <div class='group'>
+                    <div class='group-display'> Clients </div>
+                    <a href="{% url 'Distribute:selectclients' %}"><button class='redirects'>Select Clients</button></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -22,5 +22,6 @@ urlpatterns = [
     path('CForm/', include('CForm.urls')),
     path('MessageForm/', include('MessageForm.urls')),
     path('', include('HomePage.urls')),
-    path('JobForm/', include('JobForm.urls'))
+    path('JobForm/', include('JobForm.urls')),
+    path('Distribute/', include('Distribute.urls')),
 ]

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href="{% static 'Distribute/styles/selectclients.css' %}">
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body style="background-image: url('{% static 'Distribute/images/bluejohn.jpg' %}'); background-size: cover;">
+        <a href="{% url 'Distribute:index' %}"><button class='return'>Return</button></a>
+        <div class='menu'>
+            <h1 class='heading'>Select Message Template</h1>
+            {% if messages %}
+            <form method='post'>
+                {% csrf_token %}
+                <div class='selection-container'>
+                    {% for message in messages %}
+                    <button  type='submit' class='column1' value='{{message.id}}' name='text_message'>Select</button>
+                    <div class='column2'><p>{{message}}</p></div>
+                    {% endfor %}
+                </div>
+            </form>
+            {% else %}
+            <h3>No Messages Found</h3>
+            {% endif %}
+        </div>
+    </body>
+</html>

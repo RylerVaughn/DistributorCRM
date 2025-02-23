@@ -1,5 +1,7 @@
 asgiref==3.8.1
 Django==5.1.6
+django-appconf==1.1.0
+django-select2==8.3.0
 mysql==0.0.3
 mysqlclient==2.2.7
 sqlparse==0.5.3
