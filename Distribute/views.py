@@ -2,13 +2,27 @@ from django.shortcuts import render, redirect
 from MessageForm.models import MessageTemplate
 from CForm.models import Client
 from .models import MessageHistory, MessageHistoryCreator
+from .services.Distribute import MessageService
 
 def index(request):
-    text_message = request.session.get('text_message', '')
-    text_message = MessageTemplate.objects.get(id=text_message)
-    client_ids = request.session.get('client_list', '')
-    client_list = [Client.objects.get(id=int(client_id)) for client_id in client_ids]
-    return render(request, 'Distribute/index.html', context={'text_message': text_message, 'client_list': client_list})
+    if request.method == 'POST':
+        message_template_id = request.session.get('text_message', '')
+        if MessageTemplate.objects.filter(id=message_template_id).exists():
+            message_template = MessageTemplate.objects.get(id=message_template_id)
+        else:
+            message_template = 'Template not found.'
+        client_ids = request.session.getlist('client_list', '')
+        clients = [Client.objects.get(id=client_id) for client_id in client_ids]
+        MessageService.SendTextMessages(clients, message_template)
+    else:
+        text_message = request.session.get('text_message', '')
+        if MessageTemplate.objects.filter(id=text_message).exists():
+            text_message = MessageTemplate.objects.get(id=text_message)
+        else:
+            text_message = ''
+        client_ids = request.session.get('client_list', '')
+        client_list = [Client.objects.get(id=int(client_id)) for client_id in client_ids]
+        return render(request, 'Distribute/index.html', context={'text_message': text_message, 'client_list': client_list})
 
 def select_message(request):
     if request.method == 'POST':

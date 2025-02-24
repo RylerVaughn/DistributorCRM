@@ -14,13 +14,14 @@ html, body {
 
 .return {
     margin: 10px;
+    border: 2px solid white;
 }
 
 .menu {
     background-color: rgba(0, 43, 59, 0.7);
     border: 1px solid white;
     margin: 80px auto;
-    height: 80%;
+    height: 90%;
     width: 40%;
 }
 
@@ -28,7 +29,7 @@ button {
     width: 200px;
     height: 3em;
     background-color: rgba(0, 0, 0, 0);
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
 }
 
@@ -73,10 +74,12 @@ a {
 
 .group-display {
     background-color: rgba(0, 0, 0, 0.3);
+    overflow-wrap: break-word;
     height: 100%;
     border: 1px solid white;
     border-bottom: none;
     color: white;
+    text-align: center;
 }
 
 .group-display-2 {
@@ -91,6 +94,7 @@ a {
 
 .text-p {
     margin-inline: 10px;
+    overflow-y: auto;
 }
 
 .client-text {

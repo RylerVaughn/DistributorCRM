@@ -16,7 +16,7 @@
                 <div class='selection-container'>
                     {% for message in messages %}
                     <button  type='submit' class='column1' value='{{message.id}}' name='text_message'>Select</button>
-                    <div class='column2'><p>{{message}}</p></div>
+                    <div class='column2'><p class='message-p'>{{message}}</p></div>
                     {% endfor %}
                 </div>
             </form>

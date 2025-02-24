@@ -11,27 +11,29 @@
         <div class='menu'>
             <h1 class='heading'>Distribute Messages</h1>
             <div class='flex-container'>
-                <div class='group'>
-                    {% if text_message %}
-                    <div class='group-display group-display-1'><p class='text-p'> {{text_message}} </p></div>
-                    {% else %}
-                    <div class='group-display'> Please choose a template. </div>
-                    {% endif %}
-                    <a href="{% url 'Distribute:selectmessage' %}"><button class='redirects'>Select Message Template</button></a>
-                </div>
-                <div class='group'>
-                    <div class='group-display group-display-2'> 
-                    {% if client_list %}
-                        {% for client in client_list %}
-                        <h4 class='client-text'>{{client}}</h4>
-                        {% endfor %}
-                    {% else %}
-                    <p>Please choose clients.</p>
-                    {% endif %}
+                <form method='post'>
+                    <div class='group'>
+                        {% if text_message %}
+                            <div class='group-display group-display-1'><p class='text-p'> {{text_message}} </p></div>
+                        {% else %}
+                            <div class='group-display'> Please choose a template. </div>
+                        {% endif %}
+                        <a href="{% url 'Distribute:selectmessage' %}"><button class='redirects'>Select Message Template</button></a>
                     </div>
-                    <a href="{% url 'Distribute:selectclients' %}"><button class='redirects'>Select Clients</button></a>
-                </div>
-            </div>
-        </div>
+                    <div class='group'>
+                        <div class='group-display group-display-2'> 
+                            {% if client_list %}
+                                {% for client in client_list %}
+                                    <h4 class='client-text'>{{client}}</h4>
+                                {% endfor %}
+                            {% else %}
+                                <p>Please choose clients.</p>
+                            {% endif %}
+                        </div>
+                        <a href="{% url 'Distribute:selectclients' %}"><button class='redirects'>Select Clients</button></a>
+                    </form>
+                <button>Distribute</button>
+            </div flex>
+        </div menu>
     </body>
 </html>
