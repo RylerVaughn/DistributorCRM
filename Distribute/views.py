@@ -11,9 +11,10 @@ def index(request):
             message_template = MessageTemplate.objects.get(id=message_template_id)
         else:
             message_template = 'Template not found.'
-        client_ids = request.session.getlist('client_list', '')
-        clients = [Client.objects.get(id=client_id) for client_id in client_ids]
+        client_ids = request.session.get('client_list', [18])
+        clients = [Client.objects.get(id=int(client_id)) for client_id in client_ids]
         MessageService.SendTextMessages(clients, message_template)
+        return redirect("HomePage:index")
     else:
         text_message = request.session.get('text_message', '')
         if MessageTemplate.objects.filter(id=text_message).exists():

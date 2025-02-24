@@ -10,15 +10,15 @@
         <a href="{% url 'HomePage:index' %}"><button class='return'>Return</button></a>
         <div class='menu'>
             <h1 class='heading'>Distribute Messages</h1>
-            <div class='flex-container'>
-                <form method='post'>
+                <form method='post' class='flex-container'>
+                    {% csrf_token %}
                     <div class='group'>
                         {% if text_message %}
                             <div class='group-display group-display-1'><p class='text-p'> {{text_message}} </p></div>
                         {% else %}
                             <div class='group-display'> Please choose a template. </div>
                         {% endif %}
-                        <a href="{% url 'Distribute:selectmessage' %}"><button class='redirects'>Select Message Template</button></a>
+                        <a href="{% url 'Distribute:selectmessage' %}"><button type='button' class='redirects'>Select Message Template</button></a>
                     </div>
                     <div class='group'>
                         <div class='group-display group-display-2'> 
@@ -30,10 +30,10 @@
                                 <p>Please choose clients.</p>
                             {% endif %}
                         </div>
-                        <a href="{% url 'Distribute:selectclients' %}"><button class='redirects'>Select Clients</button></a>
-                    </form>
-                <button>Distribute</button>
-            </div flex>
-        </div menu>
+                        <a href="{% url 'Distribute:selectclients' %}"><button type='button' class='redirects'>Select Clients</button></a>
+                    </div>
+                    <button type='submit'>Distribute</button>
+                </form>
+        </div>
     </body>
 </html>
