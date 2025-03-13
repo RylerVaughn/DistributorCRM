@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path("Messenger/", include("Messenger.urls")),
     path('admin/', admin.site.urls),
     path('CForm/', include('CForm.urls')),
     path('MessageForm/', include('MessageForm.urls')),

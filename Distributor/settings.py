@@ -26,12 +26,15 @@ SECRET_KEY = 'django-insecure-=gdy^f7tw*e5sh1aodu*p5x)lmoz+^!zjoel!)ux*@pfi#rbdp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "https://8219-47-146-27-35.ngrok-free.app",
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "Messenger.apps.MessengerConfig",
     'Distribute.apps.DistributeConfig',
     'JobForm.apps.JobformConfig',
     'HomePage.apps.HomepageConfig',

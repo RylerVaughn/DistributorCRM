@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Messages(models.Model):
+    message_to = models.CharField(max_length=25)
+    message_from = models.CharField(max_length=25)
+    message_body = models.TextField()
