@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "https://8219-47-146-27-35.ngrok-free.app",
+    "localhost",
+    "http://127.0.0.1:8000/",
 ]
 
 

@@ -16,13 +16,18 @@ def index(request):
         MessageService.SendTextMessages(clients, message_template)
         return redirect("HomePage:index")
     else:
-        text_message = request.session.get('text_message', '')
-        if MessageTemplate.objects.filter(id=text_message).exists():
+        # retrieve last chosen text message so that it already shows up in the menu.
+        text_message = request.session.get('text_message', '') 
+
+        # Try block to make sure that text message has a value without provoking an error.
+        try:
             text_message = MessageTemplate.objects.get(id=text_message)
-        else:
+        except:
             text_message = ''
+
         client_ids = request.session.get('client_list', '')
         client_list = [Client.objects.get(id=int(client_id)) for client_id in client_ids]
+        
         return render(request, 'Distribute/index.html', context={'text_message': text_message, 'client_list': client_list})
 
 def select_message(request):
