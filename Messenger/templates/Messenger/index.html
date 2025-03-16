@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="{% static 'Messenger/styles/index.css' %}", type='text/css', rel='stylesheet'>
+    <link href="{% static 'Messenger/styles/index.css' %}" type='text/css' rel='stylesheet'>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 </head>
@@ -14,14 +14,14 @@
         <h1 class='heading'>Messages</h1>
     </div>
     <div id="contact-list">
-        {% if clients %}
-            {% for client in clients %}
+        {% if conversations %}
+            {% for client in conversations %}
             <button class='contact-button'>
                 <div class="logo-container">
                     <img src="{% static 'Messenger/images/userlogo.png' %}" class='user-logo'>
                 </div>
                 <div class='client-info-container'>
-                    <h1>{{client.first_name}} {{client.last_name}}</h1>
+                    <h1>{{client}}</h1>
                 </div>
             </button>
             {% endfor %}
@@ -31,7 +31,7 @@
     </div>
     <div id='message-tab'>
     </div>
-    {{ clients|json_script:"client-data" }}
+    {{ conversations|json_script:"conversation-data" }}
     <script src="{% static 'Messenger/scripts/index.js' %}"></script>
 </body>
 </html>
