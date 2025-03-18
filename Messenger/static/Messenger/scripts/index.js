@@ -22,9 +22,9 @@ contactButtons.forEach(contactButton => {
                 let textMessage = document.createElement("div");
                 
                 if (message["sender"] == "+18127821348") {
-                    textMessage.setAttribute("class", "outbound-message");
+                    textMessage.setAttribute("class", "outbound message");
                 } else {
-                    textMessage.setAttribute("class", "inbound-message");
+                    textMessage.setAttribute("class", "inbound message");
                 }
     
                 textMessage.appendChild(messageBody);
